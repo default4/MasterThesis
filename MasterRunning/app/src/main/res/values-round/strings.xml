@@ -1,0 +1,12 @@
+<resources>
+    <string name="select_your_gender">Select gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="next">Next</string>
+
+    <string name="choose_your_weight">Current weight</string>
+
+    <string name="choose_your_height">Current height</string>
+
+    <string name="choose_your_age">Current age</string>
+</resources>

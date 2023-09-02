@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF"/> <!-- Change the color as per your need -->
+    <corners android:radius="192dp"/> <!-- This assumes your screen width is 384x384 as you mentioned. Half of 384 is 192, hence the radius -->
+</shape>

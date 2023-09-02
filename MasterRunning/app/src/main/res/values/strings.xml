@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Master Running</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">From the Square world,\nHello, %1$s!</string>
+    <string name="tile_label">Example tile</string>
+    <string name="title_activity_presentation._main">presentation.MainActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="complication_label">Example complication</string>
+    <string name="y">y</string>
+    <string name="cm">cm</string>
+    <string name="kg">kg</string>
+    <string name="fitness_level">Fitness Level</string>
+    <string name="beginner">Beginner</string>
+    <string name="intermediate">Intermediate</string>
+    <string name="advanced">Advanced</string>
+    <string name="select_your_goals">Select goals</string>
+    <string name="improve_overall_fitness">Improve Overall Fitness</string>
+    <string name="weight_loss">Weight Loss</string>
+    <string name="increase_running_speed">Increase Running Speed</string>
+    <string name="improve_running_endurance">Improve Running Endurance</string>
+    <string name="submit">Submit</string>
+    <string name="duration_text">Duration: %1$d minutes</string>
+    <string name="intensity_text">Intensity: %1$d bpm</string>
+    <string name="start">Start</string>
+</resources>

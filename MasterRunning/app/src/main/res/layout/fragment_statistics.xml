@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="8dp">
+
+    <TextView
+        android:id="@+id/current_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/today_steps"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="Today Steps: 0"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_rectangle"
+            android:padding="7dp"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/today_calories"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="Today's Cals: 0"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_rectangle"
+            android:padding="7dp"
+            android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/avg_steps"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Wkly Avg Steps: 0"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_rectangle"
+        android:padding="7dp"
+        android:gravity="center"
+
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/avg_calories"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Wkly Avg Cals: 0"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_rectangle"
+        android:padding="7dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/number_of_trainings"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Wkly Trainings: 0"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_rectangle"
+        android:padding="7dp"
+        android:gravity="center"
+        android:textSize="15sp" />
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/oval_button"
+            android:gravity="center"/>
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp"/>
+
+</LinearLayout>
+    </ScrollView>
