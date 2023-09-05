@@ -17,7 +17,6 @@ import android.os.Looper;
 import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -34,7 +33,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Locale;
-import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 
@@ -251,8 +249,19 @@ public class RunningProcess extends AppCompatActivity implements SensorEventList
         if (stepCountDict == null) stepCountDict = new HashMap<>();
 
         // Update the values for the current day
-        burnedCaloriesDict.put(currentDay, Math.round(caloriesBurned)); // Rounding to nearest integer
-        stepCountDict.put(currentDay, currentSteps);
+        if (burnedCaloriesDict.containsKey(currentDay)) {
+            int existingCalories = burnedCaloriesDict.get(currentDay);
+            burnedCaloriesDict.put(currentDay, Math.round(calories) + existingCalories);
+        } else {
+            burnedCaloriesDict.put(currentDay, Math.round(calories));
+        }
+
+        if (stepCountDict.containsKey(currentDay)) {
+            int existingSteps = stepCountDict.get(currentDay);
+            stepCountDict.put(currentDay, steps + existingSteps);
+        } else {
+            stepCountDict.put(currentDay, steps);
+        }
 
         // Save the updated workoutHistory list back to SharedPreferences
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -296,7 +305,7 @@ public class RunningProcess extends AppCompatActivity implements SensorEventList
             caloriesBurned += additionalCalories;
 
             // Update the UI
-            burnedCaloriesTextView.setText(String.format(Locale.getDefault(), "%.2f", caloriesBurned));
+            burnedCaloriesTextView.setText(String.format(Locale.getDefault(), "%.0f", caloriesBurned));
         }
     }
 

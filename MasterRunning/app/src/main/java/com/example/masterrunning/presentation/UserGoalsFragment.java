@@ -90,6 +90,7 @@ public class UserGoalsFragment extends Fragment {
                         kilometerDict.put(day, 0);
                     }
 
+
                     saveMapData("sleep_dict", sleepDict);
                     saveMapData("burned_calories_dict", burnedCaloriesDict);
                     saveMapData("steps_count_dict", stepCountDict);

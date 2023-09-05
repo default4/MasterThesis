@@ -41,6 +41,7 @@ import java.util.Set;
 public class StartRunningFragment extends Fragment {
     Button btnStartRunning;
     ImageButton btnGoToStatistics;
+    ImageButton btnGoToGoal;
 
 
     private Set<HealthPermissionManager.PermissionKey> mKeySet;
@@ -69,7 +70,7 @@ public class StartRunningFragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
-    @SuppressLint("ClickableViewAccessibility")
+    @SuppressLint({"ClickableViewAccessibility", "MissingInflatedId"})
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -97,6 +98,14 @@ public class StartRunningFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 moveToStatisticsFragment();
+            }
+        });
+
+        // Setting up the button for transitioning to StatisticsFragment
+        btnGoToGoal = view.findViewById(R.id.btn_go_to_goal); // Ensure this button exists in your layout
+        btnGoToGoal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { moveToGoalFragment();
             }
         });
 
@@ -200,6 +209,14 @@ public class StartRunningFragment extends Fragment {
         StatisticsFragment statisticsFragment = new StatisticsFragment();
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment_container, statisticsFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    private void moveToGoalFragment() {
+        CalendarActivity calendaractivity = new CalendarActivity();
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, calendaractivity);
         transaction.addToBackStack(null);
         transaction.commit();
     }

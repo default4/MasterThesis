@@ -4,4 +4,10 @@
         <item name="android:textColorPrimary">@android:color/white</item>
         <item name="android:textColorSecondary">@android:color/holo_green_light</item>
     </style>
+
+    <style name="CalendarDateTextAppearance" parent="android:TextAppearance">
+        <item name="android:textColor">#FFFFFF</item> <!-- White text color -->
+    </style>
+
+
 </resources>

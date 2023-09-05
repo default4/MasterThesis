@@ -31,20 +31,7 @@ class MainActivity : AppCompatActivity() {
             loadGenderFragment()
         }
 
-        val alarmMgr = getSystemService(ALARM_SERVICE) as AlarmManager
-        val intent = Intent(this, TrainingAlarmReceiver::class.java)
-        val alarmIntent = PendingIntent.getBroadcast(this, 0, intent, 0)
-
-        // Set the alarm to run at 23:50 daily
-        val calendar: Calendar = Calendar.getInstance()
-        calendar.timeInMillis = System.currentTimeMillis()
-        calendar.set(Calendar.HOUR_OF_DAY, 23)
-        calendar.set(Calendar.MINUTE, 50)
-
-        alarmMgr.setInexactRepeating(
-            AlarmManager.RTC_WAKEUP, calendar.timeInMillis,
-            AlarmManager.INTERVAL_DAY, alarmIntent
-        )
+        CheckTraining.scheduleAlarm(this);
     }
 
     private fun isUserDataSaved(): Boolean {
